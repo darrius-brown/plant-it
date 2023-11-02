@@ -1,0 +1,10 @@
+Main Plans for the application
+
+Utilize a plant care API or make one if there is no adequate API available.
+
+The purpose of this app is to help the user manage and take care of a plant of their chosing
+
+The app will prompt them with alerts on when to tend to a plant and in what way
+
+The user should be able to have several plants logged into the app and receive updates on them as the plant life progresses
+
