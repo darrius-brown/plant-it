@@ -20,3 +20,14 @@ Pokedex app
     
 
 
+Backend
+    We can access the pokemon data through the application 
+    Our backend purpose is to save the data on which pokemon were found and save this data
+    Create database using MondoDB
+    {
+        user: {username: name;
+                password: password;
+                }
+        pokemon owned: []
+        pokemon seen: []
+    }
