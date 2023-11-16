@@ -1,10 +1,22 @@
 Main Plans for the application
+Pokedex app
+    Main Page
+        Actual Pokedex Screen
+            should show the number of pokemon but no names
+    
+    Individual Pokemon Page
+        Most important information about the pokemon
+            name
+            type
+            picture of pokemon
+    Detailed Pokemon Page  
+        All the details of the pokemon
+        Should be directed from the individual pokemon Page
+    
+    Later Ideas
+        Click a button that pulls up a random pokemon
+        Choose to run or catch
+        catching pokemon puts into pokedex
+    
 
-Utilize a plant care API or make one if there is no adequate API available.
-
-The purpose of this app is to help the user manage and take care of a plant of their chosing
-
-The app will prompt them with alerts on when to tend to a plant and in what way
-
-The user should be able to have several plants logged into the app and receive updates on them as the plant life progresses
 
