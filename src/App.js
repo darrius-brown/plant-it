@@ -3,16 +3,17 @@ import { Routes, Route } from 'react-router-dom';
 import MainPokedexScreen from './MainPokedexScreen';
 import BriefDescriptionOfPokemon from './BriefDescriptionOfPokemon';
 import DetailOfPokemon from './DetailOfPokemon';
+import Homepage from './Homepage';
 
 function App() {
   return (
     <div className="App">
       <h1>Pokèdex</h1>
-      <h2>Welcome to "usersigned in"'s Pokedex!</h2>
       <Routes>
-        <Route path='/main' element={<MainPokedexScreen/>}/>
-        <Route path='/brief' element = {<BriefDescriptionOfPokemon/>}/>
-        <Route path='/detail' element = {<DetailOfPokemon/>}/>
+        <Route path='/home' element={<Homepage />} />
+        <Route path='/main' element={<MainPokedexScreen />} />
+        <Route path='/brief' element={<BriefDescriptionOfPokemon />} />
+        <Route path='/detail' element={<DetailOfPokemon />} />
       </Routes>
     </div>
   );
