@@ -4,6 +4,7 @@ import { getPokemonCount } from './API/PokeAPIs'
 const MainPokedexScreen = () => {
   const [numberOfPokemon, setnumberOfPokemon] = useState();
   const [pokedexList, setPokedexList] = useState();
+  
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -35,8 +36,7 @@ const MainPokedexScreen = () => {
   };
 
   return (
-    <div>
-      <h1>MainPokedexScreen</h1>
+    <div className='main-pokedex-screen'>
       <ol>
         {renderPokedexList()}
       </ol>

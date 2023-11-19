@@ -17,6 +17,8 @@ Pokedex app
         Click a button that pulls up a random pokemon
         Choose to run or catch
         catching pokemon puts into pokedex
+        Sort the pokeedex in different ways
+        
     
 
 
