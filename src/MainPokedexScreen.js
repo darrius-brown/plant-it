@@ -4,7 +4,8 @@ import { getPokemonCount } from './API/PokeAPIs'
 const MainPokedexScreen = () => {
   const [numberOfPokemon, setnumberOfPokemon] = useState();
   const [pokedexList, setPokedexList] = useState();
-  
+  const [userDatabase, setUserDatabase] = useState();
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -19,8 +20,20 @@ const MainPokedexScreen = () => {
   }, []);
 
   useEffect(() => {
-    setPokedexList(Array(numberOfPokemon).fill('______________________'));
+    const fetchData = async () => {
+      try {
+        setPokedexList(Array(numberOfPokemon).fill('______________________'));
+      } catch (error) {
+        console.error('Error setting data:', error);
+      }
+    };
+
+    fetchData();
   }, [numberOfPokemon]);
+
+  // useEffect(() => {
+  //   setPokedexList(Array(numberOfPokemon).fill('______________________'));
+  // }, [numberOfPokemon]);
 
   const renderPokedexList = () => {
     if (!pokedexList) {
@@ -29,9 +42,15 @@ const MainPokedexScreen = () => {
       )
     }
     return pokedexList.map((item, index) => {
-      return (
-      <li key={index}>{item}</li>
-      )
+      if (userDatabase.contains(index)) {
+        return (
+          <li >name of pokemon</li>
+        )
+      } else {
+        return (
+          <li key={index}>{item}</li>
+        )
+      }
     })
   };
 
