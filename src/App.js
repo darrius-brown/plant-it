@@ -10,7 +10,7 @@ function App() {
     <div className="App">
       <h1 className='main-title'>Pokèdex</h1>
       <Routes>
-        <Route path='/home' element={<Homepage />} />
+        <Route path='/' element={<Homepage />} />
         <Route path='/main' element={<MainPokedexScreen />} />
         <Route path='/brief' element={<BriefDescriptionOfPokemon />} />
         <Route path='/detail' element={<DetailOfPokemon />} />
