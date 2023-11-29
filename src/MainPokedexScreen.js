@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { getPokemon } from './API/PokeAPIs';
+import { Link } from 'react-router-dom'
+
 
 const MainPokedexScreen = () => {
   const numberOfPokemon = 1017;
@@ -22,7 +24,6 @@ const MainPokedexScreen = () => {
     const fetchData = async () => {
       try {
         const names = await Promise.all(testUserDatabase.map((num) => fetchPokemon(num)));
-        console.log('Fetched Pokemon names:', names);
         setPokemonNames(names.filter(Boolean));
       } catch (error) {
         console.error('Error setting data:', error);
@@ -50,7 +51,12 @@ const MainPokedexScreen = () => {
     }
     return pokedexList.map((item, index) => {
       if (testUserDatabase.includes(index + 1)) {
-        return <li key={index}>{pokemonNames[testUserDatabase.indexOf(index + 1)] || 'Loading...'}</li>;
+        return (
+          <Link to={`/brief/${index}`} key={index}>
+            <li>{pokemonNames[testUserDatabase.indexOf(index + 1)] || 'Loading...'}</li>
+          </Link>
+        );
+          
       } else {
         return <li key={index}>{item}</li>;
       }

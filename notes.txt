@@ -1,9 +1,10 @@
 Main Plans for the application
-Pokedex app
-    Main Page
-        Actual Pokedex Screen
-            should show the number of pokemon but no names
-    
+                                                    Pokedex app
+                                                        Main Page
+                                                            Actual Pokedex Screen
+                                                                should show the number of pokemon but no names
+                                                                DONE
+    Next Step
     Individual Pokemon Page
         Most important information about the pokemon
             name

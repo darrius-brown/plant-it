@@ -12,7 +12,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Homepage />} />
         <Route path='/main' element={<MainPokedexScreen />} />
-        <Route path='/brief' element={<BriefDescriptionOfPokemon />} />
+        <Route path="/brief/:index" element={<BriefDescriptionOfPokemon />} />
         <Route path='/detail' element={<DetailOfPokemon />} />
       </Routes>
     </div>
