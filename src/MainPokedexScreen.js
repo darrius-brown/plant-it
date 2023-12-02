@@ -52,7 +52,7 @@ const MainPokedexScreen = () => {
     return pokedexList.map((item, index) => {
       if (testUserDatabase.includes(index + 1)) {
         return (
-          <Link to={`/brief/${index}`} key={index}>
+          <Link to={`/brief/${index + 1}`} key={index}>
             <li>{pokemonNames[testUserDatabase.indexOf(index + 1)] || 'Loading...'}</li>
           </Link>
         );
