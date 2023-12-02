@@ -44,6 +44,7 @@ const renderPokemonType = () => {
 
   return (
     <div>
+      <h1>{pokemonData ? <img src={pokemonData.sprites.front_default} alt='Front of Pokemon'/> : <p>Loading...</p>}</h1>
       <h1>{pokemonData ? <h1>{(pokemonData.weight / 4.536).toFixed(1)}lbs</h1> : <p>Loading...</p>}</h1>
       <h1>{pokemonData ? <h1>{(pokemonData.height / 3.048).toFixed(1)}ft</h1> : <p>Loading...</p>}</h1>
       <h1>{pokemonData ? <h1>{pokemonData.types.type}</h1> : <p>Loading...</p>}</h1>
