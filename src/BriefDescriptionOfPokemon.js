@@ -22,12 +22,33 @@ useEffect(() => {
   };
   fetchPokemon(index);
 }, [index])
+
+const renderPokemonType = () => {
+  if (!pokemonData) {
+    return <h1>Loading....</h1>;
+  }
+
+  console.log(pokemonData.types[0].type.name)
+  console.log(pokemonData.types.length)
+
+  return pokemonData.types.map((item, index) => {
+      return (
+        <h1 to={`/brief/${index + 1}`} key={index}>
+          <li>{pokemonData.types[index].type.name || 'Loading...'}</li>
+        </h1>
+      );
+  });
+};
   
 
 
   return (
     <div>
-      <h1>{pokemonData ? <h1>{pokemonData.weight}</h1> : <p>Loading...</p>}</h1>
+      <h1>{pokemonData ? <h1>{(pokemonData.weight / 4.536).toFixed(1)}lbs</h1> : <p>Loading...</p>}</h1>
+      <h1>{pokemonData ? <h1>{(pokemonData.height / 3.048).toFixed(1)}ft</h1> : <p>Loading...</p>}</h1>
+      <h1>{pokemonData ? <h1>{pokemonData.types.type}</h1> : <p>Loading...</p>}</h1>
+      {renderPokemonType()}
+      
     </div>
   )
 }

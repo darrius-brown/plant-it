@@ -63,8 +63,6 @@ const MainPokedexScreen = () => {
     });
   };
 
-  console.log('Rendered Pokemon names:', pokemonNames);
-
   return (
     <div className='main-pokedex-screen'>
       <ol>{renderPokedexList()}</ol>
